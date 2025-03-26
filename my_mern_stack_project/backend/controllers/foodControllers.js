@@ -1,10 +1,7 @@
-import exp from "constants";
-import foodModel from "../models/foodModel";
-import fs from 'fs'
+import exp from "express";  // Express import is fine
 
-//add food item
-const addFood = async (req,res)=>{
 
-}
 
-export {addFood}
+export const addFood = (req, res) => {
+    res.send("Food added successfully!");
+};

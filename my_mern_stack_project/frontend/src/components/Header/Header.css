@@ -4,6 +4,7 @@
     background: url('/header_img.png') no-repeat;
     background-size: contain;
     position: relative;
+    margin-top: 120px;
 }
 .header-contents{
     position: absolute;
@@ -25,12 +26,27 @@
     color: white;
     font-size: 1vw;
 }
-.header-contents button{
-    border: nonw;
+.header-contents button {
+    border: none;
     color: #747474;
     font-weight: 500;
-    padding: 1vw 2.3vw;
+    padding: 0.6vw 1.5vw;  /* Reduced padding */
     background-color: white;
-    font-size: max(1vw, 13px);
-    border-radius: 50px;
+    font-size: max(0.8vw, 12px); /* Slightly smaller font */
+    border-radius: 25px; /* Slightly smaller rounded corners */
+    min-width: 100px; /* Ensures a reasonable minimum width */
+    max-width: 150px; /* Prevents it from getting too wide */
+}
+
+
+@media (max-width:10500px){
+    .header-contents{
+        max-width: 45%;
+    }
+}
+@media (max-width: 750px) {
+    .header-contents button {
+        padding: 1vw 2vw; /* Slightly reduced padding for small screens */
+        font-size: 12px; /* Keep the text readable */
+    }
 }
