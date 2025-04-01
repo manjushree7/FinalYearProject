@@ -82,6 +82,137 @@ export const assets = {
     parcel_icon
 }
 
+
+export const stall_list = [
+
+    {
+        "stall_name": "Green Leaf Bakery",
+        "location": "123 Organic St, Freshville",
+        "operating_hours": "7:00 AM - 6:00 PM",
+        "available_food": ["Whole Wheat Bread", "Vegan Cupcakes", "Organic Muffins"]
+    },
+    {
+      "stall_name": "The Fresh Market",
+        "location": "456 Healthy Ave, Veggie Town",
+        "operating_hours": "8:00 AM - 5:00 PM",
+        "available_food": ["Fresh Fruits", "Organic Vegetables", "Herbal Teas"]
+    },
+    {
+        "stall_name": "Roots and Greens",
+        "location": "789 Green Lane, Eco Park",
+        "operating_hours": "6:30 AM - 5:30 PM",
+        "available_food": ["Salads", "Vegetarian Wraps", "Smoothies"]
+    },
+    {
+        "stall_name": "Sunrise Dairy",
+        "location": "101 Dairy Rd, Milkford",
+        "operating_hours": "6:00 AM - 4:00 PM",
+        "available_food": ["Fresh Milk", "Cheese", "Yogurt"]
+    },
+    {
+        "stall_name": "Baker's Delight",
+        "location": "202 Pastry Blvd, Sweetcity",
+        "operating_hours": "7:30 AM - 7:00 PM",
+        "available_food": ["Croissants", "Sourdough Bread", "Cinnamon Rolls"]
+    },
+    {
+        "stall_name": "Golden Harvest",
+        "location": "303 Orchard Rd, Farmtown",
+        "operating_hours": "8:00 AM - 6:00 PM",
+        "available_food": ["Organic Vegetables", "Fresh Fruits", "Herbs"]
+    },
+    {
+        "stall_name": "The Vegan Stop",
+        "location": "404 Vegan Rd, Plantville",
+        "operating_hours": "9:00 AM - 7:00 PM",
+        "available_food": ["Vegan Burgers", "Quinoa Salad", "Plant-Based Milk"]
+    },
+    {
+        "stall_name": "The Fish Market",
+        "location": "505 Seafood St, Coastal City",
+        "operating_hours": "7:00 AM - 5:00 PM",
+        "available_food": ["Fresh Fish", "Shrimp", "Sushi"]
+    },
+    {
+        "stall_name": "Brewed Awakening",
+        "location": "606 Coffee Ln, Brewtown",
+        "operating_hours": "6:00 AM - 6:00 PM",
+        "available_food": ["Cappuccino", "Espresso", "Pastries"]
+    },
+    {
+        "stall_name": "Sweet Treats",
+        "location": "707 Dessert Ave, Sugarland",
+        "operating_hours": "8:00 AM - 9:00 PM",
+        "available_food": ["Ice Cream", "Cupcakes", "Brownies"]
+    },
+    {
+        "stall_name": "Organic Delights",
+        "location": "808 Green Market, Nature's Park",
+        "operating_hours": "7:30 AM - 5:30 PM",
+        "available_food": ["Organic Juices", "Vegan Dishes", "Smoothie Bowls"]
+    },
+    {
+        "stall_name": "The Spicy Shack",
+        "location": "909 Chili Rd, Spiceville",
+        "operating_hours": "11:00 AM - 8:00 PM",
+        "available_food": ["Spicy Tacos", "Chili Dogs", "Hot Wings"]
+    },
+    {
+        "stall_name": "Tasty Tacos",
+        "location": "1010 Taco Way, Salsa Town",
+        "operating_hours": "10:00 AM - 9:00 PM",
+        "available_food": ["Tacos", "Burritos", "Nachos"]
+    },
+    {
+        "stall_name": "Grill Master",
+        "location": "1111 BBQ St, Meatville",
+        "operating_hours": "10:00 AM - 10:00 PM",
+        "available_food": ["BBQ Ribs", "Grilled Chicken", "Vegetarian Skewers"]
+    },
+    {
+        "stall_name": "The Pancake House",
+        "location": "1212 Breakfast Blvd, Pancake City",
+        "operating_hours": "7:00 AM - 2:00 PM",
+        "available_food": ["Pancakes", "Waffles", "Breakfast Burritos"]
+    },
+    {
+        "stall_name": "The Smoothie Bar",
+        "location": "1313 Smoothie Rd, Fruitytown",
+        "operating_hours": "8:00 AM - 6:00 PM",
+        "available_food": ["Fruit Smoothies", "Acai Bowls", "Protein Shakes"]
+    },
+    {
+        "stall_name": "Herbivore's Haven",
+        "location": "1414 Herb St, Greenfield",
+        "operating_hours": "9:00 AM - 6:00 PM",
+        "available_food": ["Vegetarian Wraps", "Vegan Tacos", "Healthy Salads"]
+    },
+    {
+        "stall_name": "The Grill Corner",
+        "location": "1515 Grill Ave, BBQ Town",
+        "operating_hours": "11:00 AM - 10:00 PM",
+        "available_food": ["Grilled Meats", "Grilled Vegetables", "Corn on the Cob"]
+    },
+    {
+        "stall_name": "Pasta Palace",
+        "location": "1616 Noodle Rd, Pasta Town",
+        "operating_hours": "10:00 AM - 8:00 PM",
+        "available_food": ["Spaghetti", "Lasagna", "Fettuccine Alfredo"]
+    },
+    {
+        "stall_name": "Farm Fresh",
+        "location": "1717 Farm Rd, Rural Town",
+        "operating_hours": "6:30 AM - 5:00 PM",
+        "available_food": ["Fresh Eggs", "Honey", "Organic Milk"]
+    },
+    {
+        "stall_name": "Spicy Indian Curry",
+        "location": "1818 Curry St, Spice Market",
+        "operating_hours": "11:00 AM - 9:00 PM",
+        "available_food": ["Butter Chicken", "Vegan Curry", "Samosas"]
+    }
+]
+
 export const menu_list = [
     {
         menu_name: "Salad",
