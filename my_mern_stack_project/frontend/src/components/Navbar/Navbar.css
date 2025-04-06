@@ -1,6 +1,6 @@
 .navbar {
-    width: 100vw; /* Full width of the viewport */
-    height: 80px; /* Increased height */
+    width: 100vw; 
+    height: 80px; 
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;

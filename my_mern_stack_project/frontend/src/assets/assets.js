@@ -60,6 +60,81 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
+import stall1 from './stall1.jpg';
+import stall2 from './stall2.jpg';
+import stall3 from './stall3.jpg';
+import stall4 from './stall4.jpg';
+import stall5 from './stall5.jpg';
+import stall6 from './stall6.jpg';
+import stall7 from './stall7.jpg';
+
+export const stall_list = [
+    {
+        id: 1,
+        stall_name: 'Green Leaf Bakery',
+        stall_image: stall1,
+        location: '123 Bakery Street, City Center',
+        operating_hours: '8:00 AM - 6:00 PM',
+        google_map_link: 'https://goo.gl/maps/example1',
+        food_list: ['Bread', 'Pastries', 'Cakes', 'Cookies'],
+      },
+      {
+        id: 2,
+        stall_name: 'The Fresh Market',
+        stall_image: stall2,
+        location: '45 Farmers Road, Suburb',
+        operating_hours: '9:00 AM - 5:00 PM',
+        google_map_link: 'https://goo.gl/maps/example2',
+        food_list: ['Fruits', 'Vegetables', 'Organic Juice'],
+      },
+      {
+        id: 3,
+        stall_name: 'Roots and Greens',
+        stall_image: stall3,
+        location: '123 Bakery Street, City Center',
+        operating_hours: '8:00 AM - 6:00 PM',
+        google_map_link: 'https://goo.gl/maps/example1',
+        food_list: ['Bread', 'Pastries', 'Cakes', 'Cookies'],
+      },
+      {
+        id: 4,
+        stall_name: 'Sunrise Dairy',
+        stall_image: stall4,
+        location: '45 Farmers Road, Suburb',
+        operating_hours: '9:00 AM - 5:00 PM',
+        google_map_link: 'https://goo.gl/maps/example2',
+        food_list: ['Fruits', 'Vegetables', 'Organic Juice'],
+      },
+      {
+        id: 5,
+        stall_name: 'Baker’s Delight',
+        stall_image: stall5,
+        location: '123 Bakery Street, City Center',
+        operating_hours: '8:00 AM - 6:00 PM',
+        google_map_link: 'https://goo.gl/maps/example1',
+        food_list: ['Bread', 'Pastries', 'Cakes', 'Cookies'],
+      },
+      {
+        id: 6,
+        stall_name: 'Golden Harvest',
+        stall_image: stall6,
+        location: '45 Farmers Road, Suburb',
+        operating_hours: '9:00 AM - 5:00 PM',
+        google_map_link: 'https://goo.gl/maps/example2',
+        food_list: ['Fruits', 'Vegetables', 'Organic Juice'],
+      },
+      {
+        id: 7,
+        stall_name: 'Golden Stall',
+        stall_image: stall7,
+        location: '45 Farmers Road, Suburb',
+        operating_hours: '9:00 AM - 5:00 PM',
+        google_map_link: 'https://goo.gl/maps/example2',
+        food_list: ['Fruits', 'Vegetables', 'Organic Juice'],
+      },
+];
+
+
 export const assets = {
     logo,
     basket_icon,
@@ -81,137 +156,6 @@ export const assets = {
     bag_icon,
     parcel_icon
 }
-
-
-export const stall_list = [
-
-    {
-        "stall_name": "Green Leaf Bakery",
-        "location": "123 Organic St, Freshville",
-        "operating_hours": "7:00 AM - 6:00 PM",
-        "available_food": ["Whole Wheat Bread", "Vegan Cupcakes", "Organic Muffins"]
-    },
-    {
-      "stall_name": "The Fresh Market",
-        "location": "456 Healthy Ave, Veggie Town",
-        "operating_hours": "8:00 AM - 5:00 PM",
-        "available_food": ["Fresh Fruits", "Organic Vegetables", "Herbal Teas"]
-    },
-    {
-        "stall_name": "Roots and Greens",
-        "location": "789 Green Lane, Eco Park",
-        "operating_hours": "6:30 AM - 5:30 PM",
-        "available_food": ["Salads", "Vegetarian Wraps", "Smoothies"]
-    },
-    {
-        "stall_name": "Sunrise Dairy",
-        "location": "101 Dairy Rd, Milkford",
-        "operating_hours": "6:00 AM - 4:00 PM",
-        "available_food": ["Fresh Milk", "Cheese", "Yogurt"]
-    },
-    {
-        "stall_name": "Baker's Delight",
-        "location": "202 Pastry Blvd, Sweetcity",
-        "operating_hours": "7:30 AM - 7:00 PM",
-        "available_food": ["Croissants", "Sourdough Bread", "Cinnamon Rolls"]
-    },
-    {
-        "stall_name": "Golden Harvest",
-        "location": "303 Orchard Rd, Farmtown",
-        "operating_hours": "8:00 AM - 6:00 PM",
-        "available_food": ["Organic Vegetables", "Fresh Fruits", "Herbs"]
-    },
-    {
-        "stall_name": "The Vegan Stop",
-        "location": "404 Vegan Rd, Plantville",
-        "operating_hours": "9:00 AM - 7:00 PM",
-        "available_food": ["Vegan Burgers", "Quinoa Salad", "Plant-Based Milk"]
-    },
-    {
-        "stall_name": "The Fish Market",
-        "location": "505 Seafood St, Coastal City",
-        "operating_hours": "7:00 AM - 5:00 PM",
-        "available_food": ["Fresh Fish", "Shrimp", "Sushi"]
-    },
-    {
-        "stall_name": "Brewed Awakening",
-        "location": "606 Coffee Ln, Brewtown",
-        "operating_hours": "6:00 AM - 6:00 PM",
-        "available_food": ["Cappuccino", "Espresso", "Pastries"]
-    },
-    {
-        "stall_name": "Sweet Treats",
-        "location": "707 Dessert Ave, Sugarland",
-        "operating_hours": "8:00 AM - 9:00 PM",
-        "available_food": ["Ice Cream", "Cupcakes", "Brownies"]
-    },
-    {
-        "stall_name": "Organic Delights",
-        "location": "808 Green Market, Nature's Park",
-        "operating_hours": "7:30 AM - 5:30 PM",
-        "available_food": ["Organic Juices", "Vegan Dishes", "Smoothie Bowls"]
-    },
-    {
-        "stall_name": "The Spicy Shack",
-        "location": "909 Chili Rd, Spiceville",
-        "operating_hours": "11:00 AM - 8:00 PM",
-        "available_food": ["Spicy Tacos", "Chili Dogs", "Hot Wings"]
-    },
-    {
-        "stall_name": "Tasty Tacos",
-        "location": "1010 Taco Way, Salsa Town",
-        "operating_hours": "10:00 AM - 9:00 PM",
-        "available_food": ["Tacos", "Burritos", "Nachos"]
-    },
-    {
-        "stall_name": "Grill Master",
-        "location": "1111 BBQ St, Meatville",
-        "operating_hours": "10:00 AM - 10:00 PM",
-        "available_food": ["BBQ Ribs", "Grilled Chicken", "Vegetarian Skewers"]
-    },
-    {
-        "stall_name": "The Pancake House",
-        "location": "1212 Breakfast Blvd, Pancake City",
-        "operating_hours": "7:00 AM - 2:00 PM",
-        "available_food": ["Pancakes", "Waffles", "Breakfast Burritos"]
-    },
-    {
-        "stall_name": "The Smoothie Bar",
-        "location": "1313 Smoothie Rd, Fruitytown",
-        "operating_hours": "8:00 AM - 6:00 PM",
-        "available_food": ["Fruit Smoothies", "Acai Bowls", "Protein Shakes"]
-    },
-    {
-        "stall_name": "Herbivore's Haven",
-        "location": "1414 Herb St, Greenfield",
-        "operating_hours": "9:00 AM - 6:00 PM",
-        "available_food": ["Vegetarian Wraps", "Vegan Tacos", "Healthy Salads"]
-    },
-    {
-        "stall_name": "The Grill Corner",
-        "location": "1515 Grill Ave, BBQ Town",
-        "operating_hours": "11:00 AM - 10:00 PM",
-        "available_food": ["Grilled Meats", "Grilled Vegetables", "Corn on the Cob"]
-    },
-    {
-        "stall_name": "Pasta Palace",
-        "location": "1616 Noodle Rd, Pasta Town",
-        "operating_hours": "10:00 AM - 8:00 PM",
-        "available_food": ["Spaghetti", "Lasagna", "Fettuccine Alfredo"]
-    },
-    {
-        "stall_name": "Farm Fresh",
-        "location": "1717 Farm Rd, Rural Town",
-        "operating_hours": "6:30 AM - 5:00 PM",
-        "available_food": ["Fresh Eggs", "Honey", "Organic Milk"]
-    },
-    {
-        "stall_name": "Spicy Indian Curry",
-        "location": "1818 Curry St, Spice Market",
-        "operating_hours": "11:00 AM - 9:00 PM",
-        "available_food": ["Butter Chicken", "Vegan Curry", "Samosas"]
-    }
-]
 
 export const menu_list = [
     {
@@ -248,177 +192,63 @@ export const menu_list = [
     }]
 
 export const food_list = [
-    {
-        _id: "1",
-        name: "Greek salad",
-        image: food_1,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    },
+
     {
         _id: "2",
         name: "Veg salad",
         image: food_2,
         price: 18,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    }, {
-        _id: "3",
-        name: "Clover Salad",
-        image: food_3,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Salad",
+        available: true
     }, {
         _id: "4",
         name: "Chicken Salad",
         image: food_4,
         price: 24,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Salad",
+        available: false
     }, {
         _id: "5",
         name: "Lasagna Rolls",
         image: food_5,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
-    }, {
-        _id: "6",
-        name: "Peri Peri Rolls",
-        image: food_6,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
-    }, {
-        _id: "7",
-        name: "Chicken Rolls",
-        image: food_7,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Rolls",
+        available: false
     }, {
         _id: "8",
         name: "Veg Rolls",
         image: food_8,
         price: 15,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
-    }, {
-        _id: "9",
-        name: "Ripple Ice Cream",
-        image: food_9,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
-        _id: "10",
-        name: "Fruit Ice Cream",
-        image: food_10,
-        price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
-        _id: "11",
-        name: "Jar Ice Cream",
-        image: food_11,
-        price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
-        _id: "12",
-        name: "Vanilla Ice Cream",
-        image: food_12,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    },
-    {
-        _id: "13",
-        name: "Chicken Sandwich",
-        image: food_13,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    },
-    {
-        _id: "14",
-        name: "Vegan Sandwich",
-        image: food_14,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    }, {
-        _id: "15",
-        name: "Grilled Sandwich",
-        image: food_15,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    }, {
-        _id: "16",
-        name: "Bread Sandwich",
-        image: food_16,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Rolls",
+        available: true
     }, {
         _id: "17",
         name: "Cup Cake",
         image: food_17,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Cake",
+        available: true
     }, {
         _id: "18",
         name: "Vegan Cake",
         image: food_18,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
-        _id: "19",
-        name: "Butterscotch Cake",
-        image: food_19,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
-        _id: "20",
-        name: "Sliced Cake",
-        image: food_20,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
+        category: "Cake",
+        available: false
+    },  {
         _id: "21",
         name: "Garlic Mushroom ",
         image: food_21,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
-    }, {
-        _id: "22",
-        name: "Fried Cauliflower",
-        image: food_22,
-        price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
-    }, {
-        _id: "23",
-        name: "Mix Veg Pulao",
-        image: food_23,
-        price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
-    }, {
-        _id: "24",
-        name: "Rice Zucchini",
-        image: food_24,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Pure Veg",
+        available: true
     },
     {
         _id: "25",
@@ -426,7 +256,8 @@ export const food_list = [
         image: food_25,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "Pasta",
+        available: true
     },
     {
         _id: "26",
@@ -434,48 +265,49 @@ export const food_list = [
         image: food_26,
         price: 18,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "Pasta",
+        available: true
     }, {
         _id: "27",
         name: "Creamy Pasta",
         image: food_27,
         price: 16,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
-    }, {
-        _id: "28",
-        name: "Chicken Pasta",
-        image: food_28,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "Pasta",
+        available: true
     }, {
         _id: "29",
         name: "Buttter Noodles",
         image: food_29,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Noodles",
+        available: true
     }, {
         _id: "30",
         name: "Veg Noodles",
         image: food_30,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
-        _id: "31",
-        name: "Somen Noodles",
-        image: food_31,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
-    }, {
-        _id: "32",
-        name: "Cooked Noodles",
-        image: food_32,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Noodles",
+        available: true
     }
 ]
+
+
+export const reviews = [
+    {
+      stallId: 1,  
+      reviews: [
+        { id: 1, name: 'Alice', rating: 5, comment: 'Amazing food and service!' },
+        { id: 2, name: 'Bob', rating: 4, comment: 'Good food but a bit slow service.' },
+      ],
+    },
+    {
+      stallId: 2,
+      reviews: [
+        { id: 1, name: 'Charlie', rating: 5, comment: 'Great variety and fresh ingredients!' },
+        { id: 2, name: 'Daisy', rating: 3, comment: 'Decent food but not much seating space.' },
+      ],
+    },
+  ];
