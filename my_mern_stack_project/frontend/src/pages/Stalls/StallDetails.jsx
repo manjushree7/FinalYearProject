@@ -29,7 +29,9 @@ const StallDetails = () => {
           <p><strong>Available Food:</strong> {availableFood.map(food => food.name).join(', ')}</p>
           <p>
             <strong>Find on Google Maps:</strong>
-            <a href={`https://www.google.com/maps/place/${stall.latitude},${stall.longitude}`} target="_blank" rel="noopener noreferrer">
+            <a href={`https://www.google.com/maps/place/27.71213241625674,85.33094773653187`} 
+              target="_blank" 
+              rel="noopener noreferrer">
               View Location
             </a>
           </p>

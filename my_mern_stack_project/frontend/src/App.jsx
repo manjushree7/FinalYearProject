@@ -10,6 +10,8 @@ import Stalls from "./pages/Stalls/Stalls";
 import StallList from "./pages/Stalls/StallList";
 import StallDetails from "./pages/Stalls/StallDetails";  // Import StallDetails component
 import Search from "./pages/Search/Search";
+import LandingPage from './pages/LandingPage/LandingPage.jsx';
+
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -20,12 +22,13 @@ const App = () => {
       <div className="app">
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/stalls" element={<Stalls />} />
           <Route path="/stall-list" element={<StallList />} />
-          <Route path="/stall/:id" element={<StallDetails />} />  {/* Dynamic route for Stall Details */}
+          <Route path="/stall/:id" element={<StallDetails />} />
           <Route path="/search" element={<Search />} />
         </Routes>
       </div>

@@ -1,26 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Navbar.css';
-import { useState } from "react";
 import { assets } from '../../assets/assets';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';  // Make sure Link is imported
 import { StoreContext } from '../../context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
-
   const [menu, setMenu] = useState("home");
-
   const { getTotalCartAmount } = useContext(StoreContext);
 
   return (
     <div className='navbar'>
       <Link to='/'>
-        <img src={assets.logo} alt="" className='logo' />
+        <img src={assets.logo} alt="logo" className='logo' />
       </Link>
       <ul className="navbar-menu">
         <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</Link>
-        <a href='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</a>
+        <Link to='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</Link>
         <Link to='/stalls' onClick={() => setMenu("stall")} className={menu === "stall" ? "active" : ""}>stalls</Link>
-        <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</a>
+        <Link to='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</Link>
       </ul>
       <div className="navbar-right">
         <Link to="/search">
