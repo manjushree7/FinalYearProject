@@ -1,34 +1,113 @@
-.sidebar{
-    width: 18%;
-    min-height: 100vh;
-    border: 1.5px solid #a9a9a9;
-    border-top: 0;
-    font-size: max(1vw, 10px);
-}
-.sidebar-options{
-    padding-top: 50px;
-    padding-left: 20%;
+.admin-sidebar {
+    width: 280px;
+    height: 80vh;
+    padding: 25px 20px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    position: relative; /* <-- key for absolute child */
 }
-.sidebar-option{
+   
+.sidebar-content {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #a9a9a9;
-    border-right: 0;
-    padding: 8px 10px;
-    border-radius: 3px 0px 0px 3px;
-    cursor: pointer;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 100%;
 }
-.sidebar-option.active{
-    background-color: aquamarine;
-    border-color: green;
+  
+.sidebar-header {
+    margin-bottom: 30px;
+}
+  
+.sidebar-nav {
+    flex-grow: 1;
+    padding-bottom: 0;
+}
+  
+.nav-section {
+    margin-bottom: 25px;
 }
 
-@media (max-width:900px){
-    .sidebar-option p{
-        display: none;
-    }
+.sidebar-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+.sidebar-layout .main-content {
+    flex-grow: 1;
+    overflow-y: auto; 
 }
+  
+.nav-section:last-child {
+    margin-bottom: 0;
+}
+  
+.section-title {
+    color: #888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+  
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+  
+.nav-item:hover {
+    background: #f8f8f8;
+    color: #333;
+}
+  
+.nav-item.active {
+    background: #f0f7ff;
+    color: #096f09;
+    font-weight: 500;
+}
+  
+.nav-icon {
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+  
+.sidebar-cta {
+    margin-top: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+   
+.sidebar-cta h4 {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+  
+.upload-btn {
+    width: 100%;
+    padding: 10px;
+    background: #096f09;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+  
+.upload-btn:hover {
+    background: #096f09;
+}
+
+  

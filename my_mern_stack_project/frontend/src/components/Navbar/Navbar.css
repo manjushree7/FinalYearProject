@@ -9,9 +9,10 @@
     position: fixed; /* Fix it to the top */
     top: 0;
     left: 0;
-    background-color: white; /* Ensures visibility if using position fixed */
-    z-index: 1000; /* Keeps it above other elements */
-    padding: 0 40px; /* Added some padding to prevent elements from touching screen edges */
+    background-color: white; 
+    z-index: 100; 
+    padding: 0 40px; 
+
 }
 
 .navbar .logo {

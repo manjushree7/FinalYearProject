@@ -29,8 +29,17 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Display Login Popup */}
-      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+      {/* REPLACE THIS SECTION - Old LoginPopup rendering */}
+      {/* {showLogin && <LoginPopup setShowLogin={setShowLogin} />} */}
+
+      {/* NEW LoginPopup rendering with overlay */}
+      {showLogin && (
+        <div className="login-popup-overlay">
+          <div className="login-popup-content">
+            <LoginPopup setShowLogin={setShowLogin} />
+          </div>
+        </div>
+      )}
 
       {/* About Section */}
       <section className="about-section" style={{ marginTop: "30px" }}>
@@ -39,12 +48,11 @@ export default function LandingPage() {
           <p>
             ShopLocally empowers you to support local stall owners and their food product by shopping
             directly from their stalls. By using our platform, you not only get fresh,
-            organic food products but also help the local economy thrive. It’s easy, fast, and
+            organic food products but also help the local economy thrive. It's easy, fast, and
             sustainable!
           </p>
         </div>
       </section>
-
 
       {/* Features */}
       <section className="features-section">
