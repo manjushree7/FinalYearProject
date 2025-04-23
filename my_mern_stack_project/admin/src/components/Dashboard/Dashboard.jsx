@@ -5,10 +5,9 @@ import './Dashboard.css';
 
 const Dashboard = () => {
   const stats = {
-    totalCustomers: 1243,
-    activeStalls: 87,
-    newCustomersThisMonth: 142,
-    monthlyGrowth: 12.5
+    totalCustomers: 45,
+    activeStalls: 7,
+    newCustomersThisMonth: 21,
   };
 
   const recentCustomers = [
@@ -47,19 +46,6 @@ const Dashboard = () => {
               <p>{stats.activeStalls}</p>
               <span className="stat-trend">
                 View all stalls
-              </span>
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-icon">
-              <FiTrendingUp />
-            </div>
-            <div className="stat-content">
-              <h3>Monthly Growth</h3>
-              <p>{stats.monthlyGrowth}%</p>
-              <span className="stat-trend positive">
-                ↑ {stats.monthlyGrowth}% from last month
               </span>
             </div>
           </div>

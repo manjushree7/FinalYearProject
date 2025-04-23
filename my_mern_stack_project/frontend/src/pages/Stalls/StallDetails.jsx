@@ -67,7 +67,7 @@ const StallDetails = () => {
 
       {/* Out of Stock Food Section */}
       <div className="food-list">
-        <h2>Out of Stock</h2>
+        <h2>Sold Out</h2>
         <div className="food-images">
           {outOfStockFood.map((food) => (
             <div key={food._id} className="food-item out-of-stock">

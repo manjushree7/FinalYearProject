@@ -1,15 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { ArrowRight } from "lucide-react";
 import food_delivery from "../../assets/food_delivery.jpg";
 import LoginPopup from "../../components/LoginPopup/LoginPopup";
+import Footer from "../../components/Footer/Footer"; // Import the Footer
 import "./LandingPage.css";
 
 export default function LandingPage() {
+  const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(false);
-
   return (
-    <div className="landing-wrapper">
+    <div className="landing-wrapper" style={{ backgroundColor: '#f5f5f5' }}>
       {/* Hero Section */}
       <section
         className="hero-section"
@@ -23,16 +25,12 @@ export default function LandingPage() {
             Connect with your neighborhood stalls for organic, homemade, and fresh
             products—right from your screen.
           </p>
-          <Button className="explore-button" onClick={() => setShowLogin(true)}>
+          <Button className="explore-button" onClick={() => navigate('/home')}> 
             Explore Stalls <ArrowRight size={20} />
           </Button>
         </div>
       </section>
 
-      {/* REPLACE THIS SECTION - Old LoginPopup rendering */}
-      {/* {showLogin && <LoginPopup setShowLogin={setShowLogin} />} */}
-
-      {/* NEW LoginPopup rendering with overlay */}
       {showLogin && (
         <div className="login-popup-overlay">
           <div className="login-popup-content">
@@ -42,7 +40,7 @@ export default function LandingPage() {
       )}
 
       {/* About Section */}
-      <section className="about-section" style={{ marginTop: "30px" }}>
+      <section className="about-section">
         <div className="about-wrapper">
           <h2>Why Choose ShopLocally?</h2>
           <p>
@@ -81,6 +79,39 @@ export default function LandingPage() {
             ))}
         </div>
       </section>
+
+      {/* Customer Reviews Section */}
+      <section className="reviews-section">
+        <div className="reviews-wrapper">
+          <h2>What Our Customers Say</h2>
+          <div className="reviews-grid">
+            {[
+              {
+                name: "Anjali Sharma",
+                review: "Absolutely love the freshness of the products! It's my go-to app for local shopping.",
+              },
+              {
+                name: "Ramesh Thapa",
+                review: "Very convenient and supports our local businesses. Highly recommend it!",
+              },
+              {
+                name: "Sneha Joshi",
+                review: "The real-time location feature is amazing. I found a new organic stall just 2 minutes away!",
+              }
+            ].map((review, index) => (
+              <div className="review-card" key={index}>
+                <div className="review-stars">
+                  <span>★★★★★</span>
+                  <span className="empty-stars">☆☆☆☆☆</span>
+                </div>
+                <p className="review-text">{review.review}</p>
+                <p className="review-author">{review.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }

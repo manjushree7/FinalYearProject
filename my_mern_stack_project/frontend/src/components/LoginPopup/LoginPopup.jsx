@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // <-- Import useNavigate
 import './LoginPopup.css';
 import { assets } from '../../assets/assets';
 import { auth, googleProvider } from '../../firebaseConfig';
 import { signInWithRedirect } from 'firebase/auth';
+import API from '../../utils/api';
+
 
 const LoginPopup = ({ setShowLogin, initialFormState = 'Login' }) => {
   const [currState, setCurrState] = useState(initialFormState);
   const [error, setError] = useState('');
   const [role, setRole] = useState('Customer');
+  const navigate = useNavigate(); // <-- Initialize navigate function
 
-  // Set initial form state when prop changes
   useEffect(() => {
     setCurrState(initialFormState);
   }, [initialFormState]);
@@ -37,12 +40,31 @@ const LoginPopup = ({ setShowLogin, initialFormState = 'Login' }) => {
     signInWithRedirect(auth, googleProvider);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (currState === 'Login') {
-      console.log("Logging in as", role);
-    } else {
-      console.log("Creating new", role, "account...");
+    setError('');
+  
+    const form = e.target;
+    const name = form.querySelector('input[placeholder="Your name"]')?.value;
+    const email = form.querySelector('input[placeholder="Your email"]').value;
+    const password = form.querySelector('input[placeholder="Your password"]').value;
+  
+    try {
+      let res;
+      if (currState === 'Login') {
+        res = await API.post('/auth/login', { email, password });
+        console.log('Login success:', res.data);
+        localStorage.setItem('token', res.data.token); // store the token
+      } else {
+        res = await API.post('/auth/signup', { name, email, password, role });
+        console.log('Signup success:', res.data);
+        localStorage.setItem('token', res.data.token);
+      }
+      setShowLogin(false); // close modal
+      navigate('/explore-menu'); // Navigate to ExploreMenu after successful login/signup
+    } catch (err) {
+      console.error('Auth error:', err.response?.data?.message || err.message);
+      setError(err.response?.data?.message || 'Something went wrong');
     }
   };
 

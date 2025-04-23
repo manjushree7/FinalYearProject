@@ -1,12 +1,53 @@
 import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
-import { Link } from 'react-router-dom';  // Make sure Link is imported
+import { Link, useNavigate } from 'react-router-dom';  
 import { StoreContext } from '../../context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
   const { getTotalCartAmount } = useContext(StoreContext);
+  const navigate = useNavigate();
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    setMenu("contact-us");
+    
+    if (window.location.pathname !== '/' && window.location.pathname !== '/home') {
+      navigate('/');
+    }
+    
+    setTimeout(() => {
+      const footer = document.getElementById('footer');
+      if (footer) {
+        footer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  const handleMenuClick = (e) => {
+    e.preventDefault();
+    setMenu("menu");
+    
+    if (window.location.pathname !== '/' && window.location.pathname !== '/home') {
+      navigate('/');
+      setTimeout(() => {
+        scrollToMenu();
+      }, 300);
+    } else {
+      scrollToMenu();
+    }
+  };
+
+  const scrollToMenu = () => {
+    const menuSection = document.getElementById('explore-menu');
+    if (menuSection) {
+      menuSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   return (
     <div className='navbar'>
@@ -15,9 +56,10 @@ const Navbar = ({ setShowLogin }) => {
       </Link>
       <ul className="navbar-menu">
         <Link to='/' onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>home</Link>
-        <Link to='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>menu</Link>
+        <a href="#explore-menu" onClick={handleMenuClick} className={menu === "menu" ? "active" : ""}>menu</a>
         <Link to='/stalls' onClick={() => setMenu("stall")} className={menu === "stall" ? "active" : ""}>stalls</Link>
-        <Link to='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>contact us</Link>
+        <Link to='/events' onClick={() => setMenu("events")} className={menu === "events" ? "active" : ""}>events</Link>
+        <Link to='#' onClick={handleContactClick} className={menu === "contact-us" ? "active" : ""}>contact us</Link>
       </ul>
       <div className="navbar-right">
         <Link to="/search">
