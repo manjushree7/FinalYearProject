@@ -4,6 +4,9 @@ import userIcon from '../../assets/user_icon1.jpg';
 import esewaLogo from '../../assets/esewa.png';
 import fonepayLogo from '../../assets/fonepay.png';
 import { Pencil } from 'lucide-react';
+import useStore from '../../zustand/store';
+import { useNavigate } from 'react-router-dom';
+
 
 const purchaseHistoryData = [
   { id: 1, date: '2025-05-15', item: 'Organic Avocado Salad', amount: '$12.99', location: 'Downtown Market' },
@@ -29,6 +32,8 @@ const ProfilePage = () => {
     phone: '+1 234 567 890',
     bio: 'I love coding and design!',
   });
+  const navigate = useNavigate();
+  const logout = useStore((state) => state.logout);
 
   const [editMode, setEditMode] = useState(false);
   const [formData, setFormData] = useState(user);
@@ -239,9 +244,9 @@ const ProfilePage = () => {
         <button
           className="logout-btn"
           onClick={() => {
-            // Clear auth tokens or session (based on your setup)
-            localStorage.removeItem('token'); // if using token-based login
-            window.location.href = '/'; // or use useNavigate() to redirect to home or login
+            localStorage.removeItem('token'); // clear token from localStorage
+            logout(); // clear user state from zustand store
+            navigate('/'); // redirect user to home or login
           }}
         >
           Log Out

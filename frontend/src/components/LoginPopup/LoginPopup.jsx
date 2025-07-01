@@ -13,10 +13,10 @@ import useUserStore from '../../zustand/store.jsx'; // zustand store
 const LoginPopup = ({ setShowLogin, initialFormState = 'Login' }) => {
   const [currState, setCurrState] = useState(initialFormState); // 'Login' or 'Sign Up'
   const [error, setError] = useState('');
-  const [role, setRole] = useState('Customer');
+  const [role, setRole] = useState('Customer'); // role values: 'Customer' or 'StallOwner'
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const login = useUserStore((state) => state.login);
+  const login = useUserStore((state) => state.login); // make sure your zustand store has "login" method
 
   useEffect(() => {
     setCurrState(initialFormState);
@@ -59,7 +59,7 @@ const LoginPopup = ({ setShowLogin, initialFormState = 'Login' }) => {
       );
 
       setShowLogin(false);
-      navigate(role === 'Stall Owner' ? '/stallowner/dashboard' : '/home');
+      navigate(role === 'StallOwner' ? '/stallowner/dashboard' : '/home');
     } catch (err) {
       console.error('Google sign-in failed:', err.message);
       setError('Google login failed. Please try again.');
@@ -102,7 +102,7 @@ const LoginPopup = ({ setShowLogin, initialFormState = 'Login' }) => {
         // On login, save user and token to store and navigate
         login(res.data.user, res.data.token);
         setShowLogin(false);
-        navigate(res.data.user.role === 'Stall Owner' ? '/stallowner/dashboard' : '/home');
+        navigate(res.data.user.role === 'StallOwner' ? '/stallowner/dashboard' : '/home');
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Something went wrong. Please try again.');
@@ -176,8 +176,8 @@ const LoginPopup = ({ setShowLogin, initialFormState = 'Login' }) => {
                   </button>
                   <button
                     type="button"
-                    className={`role-btn ${role === 'Stall Owner' ? 'active' : ''}`}
-                    onClick={() => setRole('Stall Owner')}
+                    className={`role-btn ${role === 'StallOwner' ? 'active' : ''}`}
+                    onClick={() => setRole('StallOwner')}
                     disabled={loading}
                   >
                     Stall Owner
