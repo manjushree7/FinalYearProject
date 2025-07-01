@@ -1,0 +1,27 @@
+.food-display {
+    text-align: left;
+    padding: 50px 80px;
+    background-color: #f9f9f9;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* ❗ Removed the problematic global img styles which were affecting icons and stars */
+
+hr {
+    margin-top: 40px;
+    border: none;
+    height: 2px;
+    background: #ddd;
+}

@@ -1,0 +1,70 @@
+.notifications-popup {
+  position: absolute;
+  top: 40px;   /* adjust based on your Navbar height */
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mark-all-read {
+  cursor: pointer;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.notifications-list {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item.unread {
+  background-color: #e6f7ff;
+  font-weight: 600;
+}
+
+.notification-item.read {
+  color: #888;
+}
+
+.notification-text {
+  margin: 0 0 4px 0;
+}
+
+.notification-time {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.notifications-footer {
+  text-align: center;
+  padding: 6px 0;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 14px;
+}

@@ -1,0 +1,93 @@
+.orders-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.orders-page > h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.orders-page .orders-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.orders-page .orders-section {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+  background: #fafafa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.orders-page .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Heading colors by status */
+.orders-page .orders-section.status-preparing .section-title {
+  color: #d48806; /* amber/orange */
+}
+
+.orders-page .orders-section.status-on-the-way .section-title {
+  color: #1890ff; /* blue */
+}
+
+.orders-page .orders-section.status-delivered .section-title {
+  color: #52c41a; /* green */
+}
+
+.orders-page .no-orders {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+}
+
+.orders-page .orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.orders-page .orders-table th,
+.orders-page .orders-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.orders-page .orders-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Rows background color based on order status */
+.orders-page .order-row.status-preparing {
+  background-color: #fff7e6; /* light orange */
+}
+
+.orders-page .order-row.status-on-the-way {
+  background-color: #e6f7ff; /* light blue */
+}
+
+.orders-page .order-row.status-delivered {
+  background-color: #e6ffe6; /* light green */
+}
+
+/* Dropdown full width */
+.orders-page .orders-table select {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+}

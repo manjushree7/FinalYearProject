@@ -1,0 +1,32 @@
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* ADD THIS */
+}
+
+.main-content {
+  margin-top: 8px;
+  display: flex;
+  flex: 1;
+  overflow-x: hidden; /* ADD THIS */
+}
+
+.content-area {
+  margin-top: 78px;
+  flex: 1;
+  padding: 20px;
+  margin-left: 280px; /* Same as sidebar width */
+  background-color: #f9f9f9;
+  min-height: calc(100vh - 70px); /* Subtract navbar height */
+  overflow-x: hidden; /* ADD THIS */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-area {
+    margin-left: 0;
+    padding: 15px;
+  }
+}

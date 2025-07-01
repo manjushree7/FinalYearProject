@@ -1,0 +1,236 @@
+/* MyItems.css - Compact Version */
+.my-items-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.my-items-container h1 {
+  text-align: center;
+  color: #333;
+  margin: 10px 0 20px 0;
+}
+
+.add-item-form {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-form h2 {
+  margin: 0 0 15px 0;
+  color: #444;
+}
+
+.add-item-form input,
+.add-item-form textarea {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-item-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.add-item-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-item-form button:hover {
+  background-color: #45a049;
+}
+
+.food-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.food-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.food-card h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.food-card .price {
+  font-weight: bold;
+  color: #e91e63;
+  font-size: 1.1em;
+  margin: 8px 0;
+}
+
+.food-card .description {
+  color: #666;
+  margin-bottom: 12px;
+  font-size: 0.9em;
+  flex-grow: 1;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  margin: 0;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  margin-right: 8px;
+}
+
+.edit-btn:hover {
+  background-color: #388e3c;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.food-card.sold-out {
+  opacity: 0.5;           /* Fades the whole card */
+  pointer-events: none;   /* Disable interactions for the card */
+  position: relative;
+}
+
+.food-card.sold-out .card-actions button {
+  opacity: 1 !important;  /* Override fade on buttons */
+  pointer-events: auto;   /* Enable interaction for buttons */
+  filter: none;           /* Remove any grey filter */
+  cursor: pointer;
+}
+
+
+.image-upload-section {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.upload-label {
+  display: inline-block;
+  cursor: pointer;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.upload-label:hover {
+  border-color: #096f09;
+}
+
+.upload-placeholder {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+}
+
+.upload-placeholder span {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 140px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.food-image-container {
+  height: 140px;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.food-card:hover .food-image {
+  transform: scale(1.03);
+}
+
+.sold-out-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .my-items-container {
+    padding: 8px 15px;
+  }
+  
+  .food-items-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .add-item-form {
+    padding: 12px;
+  }
+}

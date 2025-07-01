@@ -1,0 +1,125 @@
+.search-page {
+  padding: 2rem;
+  padding-top: 6rem; /* Pushes below navbar */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modern-search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.modern-search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: transparent;
+  padding: 0.2rem 0.6rem;
+  height: 36px;
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: black;
+  margin-right: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.clear-icon {
+  font-size: 1rem;
+  color: black;
+  margin-left: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modern-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #000;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  line-height: 1;
+}
+
+/* Category and Grid Styles */
+.category-section {
+  margin-bottom: 2rem;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.category-box {
+  background-color: #f2f2f2;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.category-box:hover {
+  background-color: #e0e0e0;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.food-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.food-item-content {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.food-item-content:hover {
+  transform: scale(1.02);
+}
+
+.food-item-content img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 0.5rem;
+}
+
+.food-info h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.food-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
